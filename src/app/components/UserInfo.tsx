@@ -18,11 +18,11 @@ import React, {FC} from 'react';
 import styles from '@/app/styles/UserInfo.module.css';
 
 const UserInfo: FC = () => {
-    const userName = "John Doe"; // Здесь может быть динамическое имя
+    const userName = "Artem Teterya";
 
     return (
         <div className={styles.userInfo}>
-            <div className={styles.userCircle}>JD</div>
+            <div className={styles.userCircle}>AT</div>
             <span className={styles.userName}>{userName}</span>
         </div>
     );

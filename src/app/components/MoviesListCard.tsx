@@ -9,7 +9,7 @@ interface Props {
 }
 
 const MoviesListCard: FC<Props> = ({ movie }) => (
-    <Link href={`/[movie]/${movie.id}`}>
+    <Link href={`/pages/${movie.id}`}>
         <div className="movie-card">
             <PosterPreview imagePath={movie.poster_path} />
             <h3>{movie.title}</h3>
