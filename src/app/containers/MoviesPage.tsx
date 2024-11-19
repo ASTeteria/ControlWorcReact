@@ -447,7 +447,7 @@
 // export default MoviesPage;
 
 
-import React, { useEffect, useState } from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import { getMovies, getGenres, searchMovies } from '../utils/api';
 import MoviesList from '../components/MoviesList';
 import Pagination from '../components/Pagination';
@@ -455,7 +455,7 @@ import SearchBar from '../components/SearchBar';
 import { Movie, Genre } from '../types/movie';
 import styles from '@/app/styles/MoviesPage.module.css';
 
-const MoviesPage: React.FC = () => {
+const MoviesPage: FC = () => {
     const [movies, setMovies] = useState<Movie[]>([]);
     const [genres, setGenres] = useState<Genre[]>([]);
     const [selectedGenre, setSelectedGenre] = useState<number | null>(null);
@@ -463,7 +463,7 @@ const MoviesPage: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
 
-    // Fetch genres on mount
+
     useEffect(() => {
         const fetchGenres = async () => {
             const genreData = await getGenres();
@@ -473,7 +473,7 @@ const MoviesPage: React.FC = () => {
         fetchGenres();
     }, []);
 
-    // Fetch movies or search results when currentPage, selectedGenre, or searchQuery changes
+
     useEffect(() => {
         const fetchMovies = async () => {
             let data;
@@ -493,21 +493,21 @@ const MoviesPage: React.FC = () => {
         fetchMovies();
     }, [currentPage, selectedGenre, searchQuery]);
 
-    // Handle genre selection
+
     const handleGenreSelect = (genreId: number | null) => {
         setSelectedGenre(genreId);
-        setSearchQuery(''); // Clear search query when a genre is selected
+        setSearchQuery('');
         setCurrentPage(1);
     };
 
-    // Handle search input
+
     const handleSearch = (query: string) => {
         setSearchQuery(query);
         setSelectedGenre(null); // Clear selected genre when searching
         setCurrentPage(1);
     };
 
-    // Handle page change
+
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
     };

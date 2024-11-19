@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 interface Props {
     rating: number;
 }
 
-const StarsRating: React.FC<Props> = ({ rating }) => {
+const StarsRating: FC<Props> = ({ rating }) => {
     const stars = Math.round(rating / 2);
     return (
         <div className="stars-rating">

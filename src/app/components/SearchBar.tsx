@@ -29,14 +29,14 @@
 // };
 //
 // export default SearchBar;
-import React, { useState } from 'react';
+import React, {FC, useState} from 'react';
 import styles from '@/app/styles/SearchBar.module.css';
 
 interface Props {
     onSearch: (query: string) => void;
 }
 
-const SearchBar: React.FC<Props> = ({ onSearch }) => {
+const SearchBar: FC<Props> = ({ onSearch }) => {
     const [query, setQuery] = useState('');
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {

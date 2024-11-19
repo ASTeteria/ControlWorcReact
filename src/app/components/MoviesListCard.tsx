@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import Link from 'next/link';
 import { Movie } from '../types/movie';
 import PosterPreview from './PosterPreview';
@@ -8,7 +8,7 @@ interface Props {
     movie: Movie;
 }
 
-const MoviesListCard: React.FC<Props> = ({ movie }) => (
+const MoviesListCard: FC<Props> = ({ movie }) => (
     <Link href={`/[movie]/${movie.id}`}>
         <div className="movie-card">
             <PosterPreview imagePath={movie.poster_path} />

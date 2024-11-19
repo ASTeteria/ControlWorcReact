@@ -29,7 +29,7 @@
 // );
 //
 // export default MovieInfo;
-import React from 'react';
+import React, {FC} from 'react';
 import GenreBadge from './GenreBadge';
 
 interface Props {
@@ -40,7 +40,7 @@ interface Props {
     genres: { id: number; name: string }[];
 }
 
-const MovieInfo: React.FC<Props> = ({ title, overview, posterPath, rating, genres }) => (
+const MovieInfo: FC<Props> = ({ title, overview, posterPath, rating, genres }) => (
     <div className="movie-info">
         <img src={`https://image.tmdb.org/t/p/w500${posterPath}`} alt={title} className="movie-poster" />
         <div className="movie-details">

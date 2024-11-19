@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 interface Props {
     imagePath: string;
 }
 
-const PosterPreview: React.FC<Props> = ({ imagePath }) => (
+const PosterPreview: FC<Props> = ({ imagePath }) => (
     <img
         src={`https://image.tmdb.org/t/p/w500${imagePath}`}
         alt="Movie Poster"

@@ -11,11 +11,11 @@
 // );
 //
 // export default Header;
-import React from 'react';
+import React, {FC} from 'react';
 import styles from '@/app/styles/Header.module.css';
 import UserInfo from './UserInfo';
 
-const Header: React.FC = () => {
+const Header: FC = () => {
     return (
         <header className={styles.header}>
             <a href="/" className={styles.logo}>

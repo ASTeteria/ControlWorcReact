@@ -1,6 +1,4 @@
-// import {Movie} from "@/app/types/movie";
 
-import {Movie} from "@/app/types/movie";
 
 const API_KEY = '13fdb80f9af99c2424e074631605cc57';
 const BASE_URL = 'https://api.themoviedb.org/3';
@@ -22,7 +20,7 @@ const BASE_URL = 'https://api.themoviedb.org/3';
 //
 //     return response.json();
 // };
-export const getMovies = async (page: number, genreId: number | null, query: string):Promise<Movie[]> => {
+export const getMovies = async (page: number, genreId: number | null, query: string) => {
     const genreFilter = genreId ? `&with_genres=${genreId}` : '';
     const searchFilter = query ? `&query=${encodeURIComponent(query)}` : '';
     const response = await fetch(
@@ -53,7 +51,7 @@ export const getMovieById = async (id: string) => {
     if (!response.ok) {
         throw new Error('Failed to fetch movie details');
     }
-    return response.json(); // Возвращает данные фильма с жанрами
+    return response.json();
 };
 
 

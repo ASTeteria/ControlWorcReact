@@ -14,10 +14,10 @@
 // );
 //
 // export default UserInfo;
-import React from 'react';
+import React, {FC} from 'react';
 import styles from '@/app/styles/UserInfo.module.css';
 
-const UserInfo: React.FC = () => {
+const UserInfo: FC = () => {
     const userName = "John Doe"; // Здесь может быть динамическое имя
 
     return (

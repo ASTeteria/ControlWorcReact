@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 interface Props {
     name: string;
 }
 
-const GenreBadge: React.FC<Props> = ({ name }) => (
+const GenreBadge: FC<Props> = ({ name }) => (
     <span className="badge">{name}</span>
 );
 

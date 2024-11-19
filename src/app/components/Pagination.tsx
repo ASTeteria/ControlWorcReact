@@ -27,7 +27,7 @@
 // };
 //
 // export default Pagination;
-import React from 'react';
+import React, {FC} from 'react';
 import styles from '@/app/styles/Pagination.module.css';
 
 interface Props {
@@ -36,7 +36,7 @@ interface Props {
     onPageChange: (page: number) => void;
 }
 
-const Pagination: React.FC<Props> = ({ currentPage, totalPages, onPageChange }) => {
+const Pagination: FC<Props> = ({ currentPage, totalPages, onPageChange }) => {
     const handlePrevious = () => {
         if (currentPage > 1) {
             onPageChange(currentPage - 1);
