@@ -1,0 +1,86 @@
+/*.moviesList {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+/*    gap: 20px;*/
+/*}*/
+
+/*.movieCard {*/
+/*    background-color: #fff;*/
+/*    border-radius: 8px;*/
+/*    overflow: hidden;*/
+/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+/*    transition: transform 0.2s;*/
+/*}*/
+
+/*.movieCard:hover {*/
+/*    transform: scale(1.05);*/
+/*}*/
+.moviesList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 5 колонок */
+    gap: 5px; /* Расстояние между карточками */
+    justify-content: center; /* Центрирование содержимого */
+    padding: 20px 0;
+}
+
+.movieCard {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movieCard:hover {
+    transform: scale(1.05);
+}
+
+.poster {
+    width: 100%; /* Увеличение постеров под контейнер */
+    max-width: 60px; /* Ограничение ширины постеров */
+    height: 100px; /* Соотношение сторон для постеров */
+    object-fit: cover; /* Кадрирование изображения */
+    border-radius: 4px;
+}
+
+/*.info {*/
+/*    padding: 10px;*/
+/*    text-align: center;*/
+/*}*/
+
+.title {
+    font-size: 0.9rem; /* Уменьшенный шрифт для длинных заголовков */
+    font-weight: bold;
+    margin: 8px 0;
+    color: #333;
+}
+
+.rating {
+    color: #ffb400;
+    font-size: 0.8rem; /* Уменьшенный размер для рейтинга */
+}
+
+/*.poster {*/
+/*    width: 100%;*/
+/*    height: 300px;*/
+/*    object-fit: cover;*/
+/*}*/
+
+/*.info {*/
+/*    padding: 10px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.title {*/
+/*    font-size: 1.2rem;*/
+/*    font-weight: bold;*/
+/*    margin-bottom: 8px;*/
+/*}*/
+
+/*.rating {*/
+/*    color: #ffb400;*/
+/*    font-size: 1rem;*/
+/*}*/
